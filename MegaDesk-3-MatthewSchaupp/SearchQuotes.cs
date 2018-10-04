@@ -16,5 +16,12 @@ namespace MegaDesk_3_MatthewSchaupp
         {
             InitializeComponent();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+            Close();
+        }
     }
 }

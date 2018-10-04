@@ -29,25 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
-            this.button1 = new System.Windows.Forms.Button();
+            this.addQuoteButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.heading = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.viewQuoteButton = new System.Windows.Forms.Button();
+            this.searchQuotesButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // addQuoteButton
             // 
-            this.button1.AutoSize = true;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(124, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "&Add New Quote";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addQuoteButton.AutoSize = true;
+            this.addQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addQuoteButton.Location = new System.Drawing.Point(124, 158);
+            this.addQuoteButton.Name = "addQuoteButton";
+            this.addQuoteButton.Size = new System.Drawing.Size(161, 35);
+            this.addQuoteButton.TabIndex = 0;
+            this.addQuoteButton.Text = "&Add New Quote";
+            this.addQuoteButton.UseVisualStyleBackColor = true;
+            this.addQuoteButton.Click += new System.EventHandler(this.addQuoteButton_Click);
             // 
             // pictureBox1
             // 
@@ -72,38 +73,41 @@
             this.heading.Text = "Mega Desk";
             this.heading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // viewQuoteButton
             // 
-            this.button2.AutoSize = true;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(124, 227);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 35);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "&View Quotes";
-            this.button2.UseVisualStyleBackColor = true;
+            this.viewQuoteButton.AutoSize = true;
+            this.viewQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewQuoteButton.Location = new System.Drawing.Point(124, 227);
+            this.viewQuoteButton.Name = "viewQuoteButton";
+            this.viewQuoteButton.Size = new System.Drawing.Size(161, 35);
+            this.viewQuoteButton.TabIndex = 6;
+            this.viewQuoteButton.Text = "&View Quotes";
+            this.viewQuoteButton.UseVisualStyleBackColor = true;
+            this.viewQuoteButton.Click += new System.EventHandler(this.viewQuoteButton_Click);
             // 
-            // button3
+            // searchQuotesButton
             // 
-            this.button3.AutoSize = true;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(124, 294);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 35);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "&Search Quotes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.searchQuotesButton.AutoSize = true;
+            this.searchQuotesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchQuotesButton.Location = new System.Drawing.Point(124, 294);
+            this.searchQuotesButton.Name = "searchQuotesButton";
+            this.searchQuotesButton.Size = new System.Drawing.Size(161, 35);
+            this.searchQuotesButton.TabIndex = 7;
+            this.searchQuotesButton.Text = "&Search Quotes";
+            this.searchQuotesButton.UseVisualStyleBackColor = true;
+            this.searchQuotesButton.Click += new System.EventHandler(this.searchQuotesButton_Click);
             // 
-            // button4
+            // exitButton
             // 
-            this.button4.AutoSize = true;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(124, 360);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 35);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "E&xit";
-            this.button4.UseVisualStyleBackColor = true;
+            this.exitButton.AutoSize = true;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Location = new System.Drawing.Point(124, 360);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(161, 35);
+            this.exitButton.TabIndex = 8;
+            this.exitButton.Text = "E&xit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // MainMenu
             // 
@@ -111,12 +115,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.searchQuotesButton);
+            this.Controls.Add(this.viewQuoteButton);
             this.Controls.Add(this.heading);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addQuoteButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.Text = "Mega Desk";
@@ -128,12 +132,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addQuoteButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label heading;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button viewQuoteButton;
+        private System.Windows.Forms.Button searchQuotesButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }
 
